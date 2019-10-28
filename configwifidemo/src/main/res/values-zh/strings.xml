@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_serial">设备序列号：</string>
+    <string name="config_wifi_sdk">配网SDK</string>
+    <string name="device_verify_code">设备验证码：</string>
+    <string name="next_step">下一步</string>
+    <string name="please_enter_device_info">请输入你想配置wifi的设备的相关信息</string>
+    <string name="serial_or_verify_code_not_empty">设备序列号或设备验证码不能为空！</string>
+</resources>

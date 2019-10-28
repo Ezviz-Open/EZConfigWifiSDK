@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ConfigWifi</string>
+    <string name="device_serial">Device serial:</string>
+    <string name="config_wifi_sdk">Config Wifi SDK</string>
+    <string name="device_verify_code">Device verify code:</string>
+    <string name="next_step">next step</string>
+    <string name="please_enter_device_info">Please enter the device\'s info which you want to config wifi.</string>
+    <string name="serial_or_verify_code_not_empty">device serial or device verify code can not be empty!</string>
+</resources>
