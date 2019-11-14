@@ -10,7 +10,6 @@ import com.ezviz.sdk.configwifi.ap.ApConfigParam;
 import com.ezviz.sdk.configwifi.common.EZConfigWifiCallback;
 
 import ezviz.ezopensdkcommon.common.IntentConstants;
-import ezviz.ezopensdkcommon.common.LogUtil;
 import ezviz.ezopensdkcommon.configwifi.ConfigWifiExecutingActivityPresenter;
 import ezviz.ezopensdkcommon.configwifi.ConfigWifiTypeConstants;
 
@@ -24,6 +23,9 @@ public class ApConfigWifiPresenter extends ConfigWifiExecutingActivityPresenter 
 
     @Override
     public void startConfigWifi(Application app, Intent configParam) {
+        // 开启日志
+        EZWiFiConfigManager.showLog(true);
+
         // step1.准备配网参数
         ApConfigParam param = new ApConfigParam();
         param.routerWifiSsid /*路由器wifi名称*/= configParam.getStringExtra(IntentConstants.ROUTER_WIFI_SSID);

@@ -24,6 +24,9 @@ public class SoundWaveConfigWifiPresenter extends ConfigWifiExecutingActivityPre
 
     @Override
     public void startConfigWifi(Application app, Intent configParam) {
+        // 开启日志
+        EZWiFiConfigManager.showLog(true);
+
         // step1.准备配网参数
         SoundWaveConfigParam param = new SoundWaveConfigParam();
         param.routerWifiSsid /*路由器wifi名称*/= configParam.getStringExtra(IntentConstants.ROUTER_WIFI_SSID);
