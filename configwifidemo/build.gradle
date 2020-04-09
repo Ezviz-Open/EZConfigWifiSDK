@@ -4,14 +4,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
-}
-
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
     defaultConfig {
@@ -35,6 +29,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.ezviz.sdk:configwifi:6.2.0'
+    implementation 'com.ezviz.sdk:configwifi:' + EZVIZ_CONFIG_WIFI_VERSION
     implementation project(path: ':app-common')
 }
