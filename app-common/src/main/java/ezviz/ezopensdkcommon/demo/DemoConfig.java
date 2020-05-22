@@ -2,6 +2,8 @@ package ezviz.ezopensdkcommon.demo;
 
 import android.os.Environment;
 
+import ezviz.ezopensdkcommon.common.BaseApplication;
+
 public class DemoConfig {
 
     /**
@@ -12,7 +14,7 @@ public class DemoConfig {
     /**
      * 文件保存位置
      */
-    private static final String DEMO_FOLDER = Environment.getExternalStorageDirectory().getPath() + "/0_OpenSDK";
+    private static final String DEMO_FOLDER = BaseApplication.mInstance.getExternalCacheDir() + "/0_OpenSDK";
 
     public static String getDemoFolder(){
         return DEMO_FOLDER;
@@ -24,6 +26,10 @@ public class DemoConfig {
 
     public static String getCapturesFolder(){
         return DEMO_FOLDER + "/Captures";
+    }
+
+    public static String getStreamsFolder(){
+        return DEMO_FOLDER + "/Streams";
     }
 
 }

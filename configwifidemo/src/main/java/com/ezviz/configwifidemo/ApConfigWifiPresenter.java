@@ -32,7 +32,8 @@ public class ApConfigWifiPresenter extends ConfigWifiExecutingActivityPresenter 
         param.deviceVerifyCode /*设备验证码*/= configParam.getStringExtra(IntentConstants.DEVICE_VERIFY_CODE);
         param.deviceHotspotSsid /*设备热点名称*/= configParam.getStringExtra(IntentConstants.DEVICE_HOTSPOT_SSID);
         param.deviceHotspotPwd /*设备热点密码*/= configParam.getStringExtra(IntentConstants.DEVICE_HOTSPOT_PWD);
-        param.autoConnect /*是否自动连接到设备热点*/= true;
+        param.autoConnect /*是否自动连接到设备热点*/= !configParam.getBooleanExtra(IntentConstants.USE_MANUAL_AP_CONFIG,
+                false);
 
         // step2.开始配网
         EZWiFiConfigManager.startAPConfig(app, param, new EZConfigWifiCallback(){
